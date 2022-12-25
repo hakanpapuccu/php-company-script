@@ -1,0 +1,9 @@
+RewriteEngine on
+
+ErrorDocument 404 http://localhost/projeler/firma/404.php
+RewriteRule ^anasayfa$ index.php [NC]
+RewriteRule ^iletisim$ iletisim.php [NC]
+RewriteRule ^hakkimizda$ hakkimizda.php [NC]
+
+RewriteRule ^haber-detay/([0-9a-zA-Z-_]+)/([0-9]+)$ haber-detay.php?sef=$1&id=$2 [L]
+RewriteRule ^([0-9a-zA-Z-_]+)/([0-9]+)$ sayfa-detay.php?sef=$1&id=$2 [L]
